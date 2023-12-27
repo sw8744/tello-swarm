@@ -178,22 +178,21 @@ swarm.parallel(lambda i, tello: tello.go_xyz_speed(locate[i][0], locate[i][1], l
 
 swarm.sync(3)
 
-# part 6 Made by 30th 이승원, 이다빈 # FIXME
-flip = []
-swarm.filp(3, 'l')
-swarm.filp(2, 'r')
+# part 6 Made by 30th 이승원, 이다빈 #
+swarm.parallel(lambda i, tello: tello.flip('l') if i == 3 else tello.go(0, 0, 0, 0))
+swarm.parallel(lambda i, tello: tello.flip('r') if i == 2 else tello.go(0, 0, 0, 0))
 swarm.sync(1)
-swarm.filp(4, 'l')
-swarm.filp(8, 'r')
+swarm.parallel(lambda i, tello: tello.flip('l') if i == 4 else tello.go(0, 0, 0, 0))
+swarm.parallel(lambda i, tello: tello.flip('r') if i == 8 else tello.go(0, 0, 0, 0))
 swarm.sync(1)
-swarm.filp(5, 'l')
-swarm.filp(1, 'r')
+swarm.parallel(lambda i, tello: tello.flip('l') if i == 5 else tello.go(0, 0, 0, 0))
+swarm.parallel(lambda i, tello: tello.flip('r') if i == 1 else tello.go(0, 0, 0, 0))
 swarm.sync(1)
-swarm.filp(9, 'l')
-swarm.filp(7, 'r')
+swarm.parallel(lambda i, tello: tello.flip('l') if i == 9 else tello.go(0, 0, 0, 0))
+swarm.parallel(lambda i, tello: tello.flip('r') if i == 7 else tello.go(0, 0, 0, 0))
 swarm.sync(1)
-swarm.filp(10, 'l')
-swarm.filp(6, 'r')
+swarm.parallel(lambda i, tello: tello.flip('l') if i == 10 else tello.go(0, 0, 0, 0))
+swarm.parallel(lambda i, tello: tello.flip('r') if i == 6 else tello.go(0, 0, 0, 0))
 swarm.sync(1)
 
 locate = [(-100, 0, 0, 50), (100, 0, 0, 50), (-100, 0, 0, 50), (100, 0, 0, 50), (-100, 0, 0, 50), (100, 0, 0, 50), (-100, 0, 0, 50), (100, 0, 0, 50), (-100, 0, 0, 50), (100, 0, 0, 50)]
