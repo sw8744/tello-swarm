@@ -73,7 +73,7 @@ locate = [(-150, -400, 0, 78), (-150, -400, 0, 78), (-150, -400, 0, 78), (-150, 
 swarm.parallel(lambda i, tello: tello.go_xyz_speed(locate[i][0], locate[i][1], locate[i][2], locate[i][3]))
 
 
-locate = [(0, 200, -200, 81), (0, 100, -200, 64), (0, 200, -200, 81), (0, 100, -200, 64), (0, 200, -200, 81)]
+locate = [(0, 200, -200, 81), (0, 100, -200, 64), (0, 200, -200, 81), (0, 100, -200, 64), (0, 200, -200, 81), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)]
 swarm.parallel(lambda i, tello: tello.go_xyz_speed(locate[i][0], locate[i][1], locate[i][2], locate[i][3]))
 
 swarm.sync(7)
@@ -100,8 +100,8 @@ swarm.filp(8, 'l')
 swarm.filp(9, 'l')
 swarm.filp(10, 'l')
 
-# part 3 Made by 30th 함정훈 FIXME
-locate = [(0, 135, 0, 67), (0, 135, 0, 67)]
+# part 3 Made by 30th 함정훈
+locate = [(0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 135, 0, 67), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 135, 0, 67)]
 swarm.parallel(10, swarm.go_xyz_speed(0, 135, 0, 67))
 swarm.parallel(6, swarm.go_xyz_speed(0, 135, 0, 67)) # 2초간 이동
 
@@ -179,6 +179,7 @@ swarm.parallel(lambda i, tello: tello.go_xyz_speed(locate[i][0], locate[i][1], l
 swarm.sync(3)
 
 # part 6 Made by 30th 이승원, 이다빈 # FIXME
+flip = []
 swarm.filp(3, 'l')
 swarm.filp(2, 'r')
 swarm.sync(1)
